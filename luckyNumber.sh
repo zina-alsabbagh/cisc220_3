@@ -16,3 +16,10 @@ luckyNumber() {
 
 
 }
+
+for ((j=1000;j<10000;j++)) ; do
+	tracker=$j
+	luckyNum=$(luckyNumber $tracker);
+	if [[ $luckyNum -eq 7 ]] ; then
+		echo $tracker;
+done
