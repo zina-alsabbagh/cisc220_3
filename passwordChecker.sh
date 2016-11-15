@@ -18,3 +18,14 @@ fi
 if [[ $pass =~ [@#$%*+-=\&] ]] ; then
 	((condition++))
 fi
+
+
+if (( $condition == 3 )) ; then
+	echo "Strong"
+elif (( $condition == 2 )) ; then
+	echo "Moderate"
+elif (( $condition == 1 )) ; then
+	echo "Weak"
+else
+	echo "Invalid password"
+fi
